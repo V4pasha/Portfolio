@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.head{
+    text-decoration: underline;
+    text-align: center;
+    color: yellow;
+    text-justify: auto;
+    opacity: 0;
+    animation: SlideTop .5s ease forwards;
+    animation-delay: .5s;
+}
+.main{
+    opacity: 0;
+    animation: SlideLeft .7s ease forwards;
+    animation-delay: 1s;
+}
+.main spam{
+    color: yellow;
+    font-style: italic;
+}
+.table{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-color: black;
+    opacity: 0;
+    animation: ZoomIn 1s ease forwards;
+    animation-delay: 1s;
+}
+.cn{
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: SlideBottom .5s ease forwards;
+    animation-delay: .5s;
+    text-decoration: none;
+}
+.cn spam{
+    color: yellow;
+    text-decoration: underline;
+}
+.btn{
+	display: inline-block;
+	padding: 12px 28px;
+	background: red;
+	border-radius: 40px;
+	box-shadow: 0 0 20px RED;
+	font-size: 16px;
+	color: black;
+	letter-spacing: 1px;
+	text-decoration: none;
+	font-weight: bolder;
+	opacity: 0;
+	animation: SlideTop .5s ease forwards,FloatImg 4s ease-out infinite;
+	animation-delay: 1s;
+}
+.btn:hover {
+	background-color: rgb(6, 230, 246);
+	box-shadow: 0 0 20px #0ef;
+}
+
+
+@keyframes SlideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+@keyframes SlideBottom{
+    0%{
+        transform: translateY(-100PX);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0PX);
+        opacity: 100%;
+    }
+}
+@keyframes SlideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+@keyframes SlideRigth{
+    0%{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(100px);
+        opacity: 100%;
+    }
+}
+@keyframes ZoomIn{
+    0%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 100%;
+    }
+}
+@keyframes FloatImg{
+    0%{
+        transform: translateY(0PX);
+    }
+    50%{
+        transform: translateY(-24PX);
+    }
+    100%{
+        transform: translateY(0PX);
+    }
+}
